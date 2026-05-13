@@ -15,3 +15,10 @@ ctx.strokeStyle = 'blue';
 ctx.lineWidth = 2;
 ctx.stroke(); //use to draw the line
 
+ctx.beginPath();
+ctx.arc(200, 150, 50, 0, Math.PI * 2);//we can use true false at end after that to form clock and anticlockwise circle
+ctx.fillStyle = 'yellow';
+ctx.fill();
+ctx.strokeStyle = 'black';
+ctx.lineWidth = 3;
+ctx.stroke();
