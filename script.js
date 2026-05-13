@@ -34,3 +34,47 @@ ctx.strokeStyle = 'pink';
 ctx.lineWidth = 2;
 ctx.stroke();
 
+//pentagon
+ctx.beginPath();
+ctx.moveTo(50, 300);//top point
+ctx.lineTo(100, 250);//right point
+ctx.lineTo(150, 300);//bottom right point
+ctx.lineTo(125, 350);//bottom left point
+ctx.lineTo(75, 350);
+ctx.closePath();
+ctx.fillStyle = 'purple';
+ctx.fill();
+ctx.strokeStyle = 'orange';
+ctx.lineWidth = 2;
+ctx.stroke();
+
+function drawHouse(x, y, size) {
+    // Draw the base of the house
+    ctx.fillStyle = 'brown';
+    ctx.fillRect(x, y, size, size);
+
+    // Draw the roof of the house
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + size / 2, y - size / 2);//size for roof is half of the size of the base
+    ctx.lineTo(x + size, y);
+    ctx.closePath();
+    ctx.fillStyle = 'darkred';
+    ctx.fill();
+    ctx.strokeStyle = 'pink';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+
+    // Draw the door of the house
+    ctx.fillStyle = 'sienna';
+    ctx.fillRect(x + size / 3, y + size / 2, size / 3, size / 2);
+
+    // Draw the windows of the house
+    ctx.fillStyle = 'lightblue';
+    ctx.fillRect(x + size / 6, y + size / 4, size / 6, size / 6);
+    ctx.fillRect(x + size / 2, y + size / 4, size / 6, size / 6);
+}
+
+// Draw multiple houses
+drawHouse(300, 300, 100);
+drawHouse(450, 300, 80);
