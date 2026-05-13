@@ -1,5 +1,5 @@
 const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d');//ctx stands for context and it is used to draw on canvas
 
 ctx.fillStyle = 'red';
 ctx.fillRect(100, 70, 200, 150);
@@ -22,3 +22,15 @@ ctx.fill();
 ctx.strokeStyle = 'black';
 ctx.lineWidth = 3;
 ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(450, 50);
+ctx.lineTo(600, 120);
+ctx.lineTo(450, 220);
+ctx.closePath();
+ctx.fillStyle = 'green';
+ctx.fill();
+ctx.strokeStyle = 'pink';
+ctx.lineWidth = 2;
+ctx.stroke();
+
